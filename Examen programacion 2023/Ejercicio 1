@@ -1,0 +1,17 @@
+#Examen de programacion CIMAT 2023
+import math as m
+def sumatoria_funcion(N, xi, delta):
+    funcion = []
+    for i in range(N):
+        sumatoria = 0
+        for n in range(0,1001):
+            calculo = (m.sin(xi*(2**n)))/(2**n)
+            sumatoria += calculo
+        funcion.append(sumatoria)
+        xi += delta
+    return(funcion)
+
+        
+
+matriz = sumatoria_funcion(4, 1, 0.5)
+print(matriz)
